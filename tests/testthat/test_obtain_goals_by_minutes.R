@@ -14,3 +14,15 @@ describe("Obtain goals by number", {
     expect_equal(obtained, expected)
   })
 })
+
+describe("Obtain golas from a list of paths", {
+  it("For América and Atlético", {
+    paths <- c(
+      "/workdir/tests/data/teams_statistics_2287_2022.json",
+      "/workdir/tests/data/teams_statistics_530_2022.json"
+    )
+    expected_goals <- c(14, 25, 28, 40, 25, 23, 7, 0)
+    obtained_goals <- obtain_goals_by_minutes_from_paths(paths)
+    expect_equal(obtained_goals, expected_goals)
+  })
+})
