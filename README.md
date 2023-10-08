@@ -2,7 +2,7 @@
 src="https://github.com/nepito/world_cup_semis/blob/develop/img/logo.jpeg" align="right" width="256"
 /></a>
 
-# Template for R projects
+# Goals by minutes
 
 ## Step to use
 
