@@ -9,8 +9,12 @@ obtain_goals_by_minutes_from_paths <- function(paths) {
 }
 
 obtain_goals_by_minutes_from_team_statistics <- function(team_stat) {
-  goals_by_minutes <- team_stat[["response"]][["goals"]][["for"]][["minute"]]
+  goals_by_minutes <- .extract_goals_by_minutes_interval(team_stat)
   comprehenr::to_vec(for (goals in goals_by_minutes) .fix_element(goals[["total"]]))
+}
+
+.extract_goals_by_minutes_interval <- function(team_stat) {
+  goals_by_minutes <- team_stat[["response"]][["goals"]][["for"]][["minute"]]
 }
 
 .fix_element <- function(element) {
