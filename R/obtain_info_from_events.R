@@ -7,3 +7,10 @@ get_time_if_event_is_goal <- function(event) {
     return(event[["time"]][["elapsed"]])
   }
 }
+
+get_name_if_event_is_goal <- function(event) {
+  if (event[["type"]] == "Goal") {
+    return(event[["team"]][["name"]])
+  }
+}
+
