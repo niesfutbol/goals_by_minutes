@@ -22,4 +22,15 @@ describe("Obtain goals from events", {
     obtained <- get_name_from_goal_events(events)
     expect_equal(obtained, expected)
   })
+  it("Obtain name form event type 'Goal'", {
+    event <- list(
+      "type" = "Goal",
+      "time" = list("elapsed" = 21),
+      "team" = list("id" = 505, "name" = "Inter"),
+      "player" = list("id" = 217, "name" = "L. Martínez")
+    )
+    obtained <- get_name_if_event_is_goal(event)
+    expected <- "Inter"
+    expect_equal(obtained, expected)
+  })
 })
