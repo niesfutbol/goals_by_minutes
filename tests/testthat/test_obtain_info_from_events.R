@@ -17,4 +17,9 @@ describe("Obtain goals from events", {
     obtained <- get_time_from_goal_events(events)
     expect_equal(obtained, expected)
   })
+  it("Obtain team nane from all 'Goal' events", {
+    expected <- c("Cremonese", "Inter", "Inter")
+    obtained <- get_name_from_goal_events(events)
+    expect_equal(obtained, expected)
+  })
 })
