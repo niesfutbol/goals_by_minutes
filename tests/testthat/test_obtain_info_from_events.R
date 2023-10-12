@@ -15,5 +15,6 @@ describe("Obtain goals from events", {
   it("Obtain minute from all 'Goal' events", {
     expected <- c(11, 21, 65)
     obtained <- get_time_from_goal_events(events)
+    expect_equal(obtained, expected)
   })
 })
