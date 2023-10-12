@@ -4,5 +4,7 @@ src="https://github.com/nepito/world_cup_semis/blob/develop/img/logo.jpeg" align
 
 # Goals by minutes
 
+[![codecov](https://codecov.io/gh/niesfutbol/goals_by_minutes/graph/badge.svg?token=mVqb5hLTzx)](https://codecov.io/gh/niesfutbol/goals_by_minutes)
+
 ## Step to use
 
