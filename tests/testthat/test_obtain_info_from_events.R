@@ -1,7 +1,7 @@
 describe("Obtain goals from events", {
-  path_america <- "/workdir/tests/data/data_events_881972.json"
-  america_statistics <- jsonlite::read_json(path_america)
-  it("Obtain event type", {
+  event_path <- "/workdir/tests/data/data_events_881972.json"
+  events <- jsonlite::read_json(event_path)
+  it("Obtain minutes form event type 'Goal'", {
     event <- list(
       "type" = "Goal",
       "time" = list("elapsed" = 21),
@@ -11,5 +11,9 @@ describe("Obtain goals from events", {
     obtained <- get_time_if_event_is_goal(event)
     expected <- 21
     expect_equal(obtained, expected)
+  })
+  it("Obtain minute from all 'Goal' events", {
+    expected <- c(11, 21, 65)
+    obtained <- get_time_from_goal_events(events)
   })
 })
