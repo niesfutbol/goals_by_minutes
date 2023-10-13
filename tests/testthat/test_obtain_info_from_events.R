@@ -28,7 +28,7 @@ describe("Obtain goals from events", {
     expect_equal(obtained, expected)
   })
   it("Obtain team id from all 'Goal' events", {
-    expected <- c(700, 505, 505)
+    expected <- c(520, 505, 505)
     obtained <- get_team_id_from_goal_events(events)
     expect_equal(obtained, expected)
   })

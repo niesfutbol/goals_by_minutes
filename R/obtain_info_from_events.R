@@ -6,6 +6,10 @@ get_name_from_goal_events <- function(events) {
   comprehenr::to_vec(for (event in events[["response"]]) get_name_if_event_is_goal(event))
 }
 
+get_team_id_from_goal_events <- function(events) {
+  comprehenr::to_vec(for (event in events[["response"]]) get_team_id_if_event_is_goal(event))
+}
+
 get_time_if_event_is_goal <- function(event) {
   get_variable_if_event_is_goal(event, "time_elapsed")
 }
