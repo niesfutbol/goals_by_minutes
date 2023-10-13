@@ -17,7 +17,7 @@ describe("Obtain goals from events", {
     expected <- 21
     expect_equal(obtained, expected)
   })
-  it("Obtain team nane from all 'Goal' events", {
+  it("Obtain team name from all 'Goal' events", {
     expected <- c("Cremonese", "Inter", "Inter")
     obtained <- get_name_from_goal_events(events)
     expect_equal(obtained, expected)
@@ -25,6 +25,11 @@ describe("Obtain goals from events", {
   it("Obtain name form event type 'Goal'", {
     obtained <- get_name_if_event_is_goal(event)
     expected <- "Inter"
+    expect_equal(obtained, expected)
+  })
+  it("Obtain team id from all 'Goal' events", {
+    expected <- c(700, 505, 505)
+    obtained <- get_team_id_from_goal_events(events)
     expect_equal(obtained, expected)
   })
   it("Obtain taem id form event type 'Goal'", {
