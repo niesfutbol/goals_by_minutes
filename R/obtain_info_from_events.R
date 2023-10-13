@@ -1,3 +1,4 @@
+#' @export
 GoalsFromEvents <- R6::R6Class("GoalsFromEvents", list(
   events = NULL,
   goal_minutes = NULL,
