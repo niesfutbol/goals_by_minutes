@@ -2,10 +2,12 @@ GoalsFromEvents <- R6::R6Class("GoalsFromEvents", list(
   events = NULL,
   goal_minutes = NULL,
   team_name = NULL,
+  team_id = NULL,
   initialize = function(events) {
     self$events <- events
     self$goal_minutes <- get_time_from_goal_events(self$events)
     self$team_name <- get_name_from_goal_events(self$events)
+    self$team_id <- get_team_id_from_goal_events(self$events)
   }
 ))
 

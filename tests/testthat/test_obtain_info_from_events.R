@@ -1,7 +1,7 @@
 describe("GoalsFromEvents", {
   event_path <- "/workdir/tests/data/data_events_881972.json"
   events <- jsonlite::read_json(event_path)
-  it("new", {
+  it("Init and properties", {
     goalsFromEvents <- GoalsFromEvents$new(events)
     expected <- c(11, 21, 65)
     obtained <- goalsFromEvents$goal_minutes
