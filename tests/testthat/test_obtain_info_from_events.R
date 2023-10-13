@@ -3,6 +3,9 @@ describe("GoalsFromEvents", {
   events <- jsonlite::read_json(event_path)
   it("Init and properties", {
     goalsFromEvents <- GoalsFromEvents$new(events)
+    expected <- "881972"
+    obtained <- goalsFromEvents$match_id
+    expect_equal(obtained, expected)
     expected <- c(11, 21, 65)
     obtained <- goalsFromEvents$goal_minutes
     expect_equal(obtained, expected)
