@@ -27,4 +27,9 @@ describe("Obtain goals from events", {
     expected <- "Inter"
     expect_equal(obtained, expected)
   })
+  it("Obtain taem id form event type 'Goal'", {
+    obtained <- get_team_id_if_event_is_goal(event)
+    expected <- 505
+    expect_equal(obtained, expected)
+  })
 })
