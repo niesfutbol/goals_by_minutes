@@ -9,6 +9,9 @@ describe("GoalsFromEvents", {
     expected <- c("Cremonese", "Inter", "Inter")
     obtained <- goalsFromEvents$team_name
     expect_equal(obtained, expected)
+    expected <- c(520, 505, 505)
+    obtained <- goalsFromEvents$team_id
+    expect_equal(obtained, expected)
   })
 })
 
