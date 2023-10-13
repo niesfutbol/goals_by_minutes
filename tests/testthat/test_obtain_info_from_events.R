@@ -1,3 +1,11 @@
+describe("GoalsFromEvents", {
+  event_path <- "/workdir/tests/data/data_events_881972.json"
+  events <- jsonlite::read_json(event_path)
+  it("new", {
+    goalsFromEvents <- GoalsFromEvents$new(events)
+  })
+})
+
 describe("Obtain goals from events", {
   event_path <- "/workdir/tests/data/data_events_881972.json"
   events <- jsonlite::read_json(event_path)
