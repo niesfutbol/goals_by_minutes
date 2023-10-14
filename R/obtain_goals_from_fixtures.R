@@ -1,4 +1,4 @@
-obtain_local_info_from_fixture <- function(fixture) {
+obtain_home_info_from_fixture <- function(fixture) {
   list(
     "fixture_id" = fixture[["fixture"]][["id"]],
     "date" = fixture[["fixture"]][["date"]],

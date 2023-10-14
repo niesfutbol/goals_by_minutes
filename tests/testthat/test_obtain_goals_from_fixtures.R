@@ -24,7 +24,7 @@ describe("Obtain goal by half from fixture", {
       "score_halftime" = 0,
       "score_fulltime" = 0
     )
-    obtained <- obtain_local_info_from_fixture(fixture)
+    obtained <- obtain_home_info_from_fixture(fixture)
     expect_equal(expected, obtained)
   })
   it("take away info", {
