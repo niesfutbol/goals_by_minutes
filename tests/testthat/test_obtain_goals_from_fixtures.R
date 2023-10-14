@@ -1,17 +1,17 @@
 describe("Obtain goal by half from fixture", {
-    fixture <- list(
-      "fixture" = list("id" = 881781, "date" = "2022-08-13T16:30:00+00:00"),
-      "league" = list("id" = 135, "season" = 2022, "round" = "Regular Season - 1"),
-      "teams" = list(
-        "home" = list("id" = 498, "winner" = FALSE),
-        "away" = list("id" = 499, "winner" = TRUE)
-      ),
-      "goals" = list("home" = 0, "away" = 2),
-      "score" = list(
-        "halftime" = list("home" = 0, "away" = 1),
-        "fulltime" = list("home" = 0, "away" = 2)
-      )
+  fixture <- list(
+    "fixture" = list("id" = 881781, "date" = "2022-08-13T16:30:00+00:00"),
+    "league" = list("id" = 135, "season" = 2022, "round" = "Regular Season - 1"),
+    "teams" = list(
+      "home" = list("id" = 498, "winner" = FALSE),
+      "away" = list("id" = 499, "winner" = TRUE)
+    ),
+    "goals" = list("home" = 0, "away" = 2),
+    "score" = list(
+      "halftime" = list("home" = 0, "away" = 1),
+      "fulltime" = list("home" = 0, "away" = 2)
     )
+  )
   it("take local info", {
     expected <- list(
       "fixture_id" = 881781,
