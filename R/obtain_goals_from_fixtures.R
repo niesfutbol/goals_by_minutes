@@ -10,12 +10,7 @@ obtain_home_info_from_fixture <- function(fixture) {
 
 obtain_away_info_from_fixture <- function(fixture) {
   match_info <- .obtain_match_info_from_fixture(fixture)
-  away_info <- list(
-    "team_id" = fixture[["teams"]][["away"]][["id"]],
-    "home" = FALSE,
-    "score_halftime" = fixture[["score"]][["halftime"]][["away"]],
-    "score_fulltime" = fixture[["score"]][["fulltime"]][["away"]]
-  )
+  away_info <- .obtain_away_team_info_from_fixture(fixture)
   c(match_info, away_info)
 }
 
@@ -26,5 +21,14 @@ obtain_away_info_from_fixture <- function(fixture) {
     "league_id" = fixture[["league"]][["id"]],
     "season" = fixture[["league"]][["season"]],
     "round" = fixture[["league"]][["round"]]
+  )
+}
+
+.obtain_away_team_info_from_fixture <- function(fixture) {
+  away_info <- list(
+    "team_id" = fixture[["teams"]][["away"]][["id"]],
+    "home" = FALSE,
+    "score_halftime" = fixture[["score"]][["halftime"]][["away"]],
+    "score_fulltime" = fixture[["score"]][["fulltime"]][["away"]]
   )
 }
